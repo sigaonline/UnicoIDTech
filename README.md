@@ -14,7 +14,7 @@
     - Para verifica o coverage utilizei o Fine Code Coverage, link para download: https://github.com/FortuneN/FineCodeCoverage/releases
     - Cobertura acima dos 90%
   
-  4. Arquivo postman com os payloads incluso, precisando apenas alterar os id quando for executar.
+  4. Arquivo postman, Desafio.postman_collection.json,  com os payloads incluso, precisando apenas alterar os id quando for executar.
   
   Observações:
   - Deve-se ter instalado;
