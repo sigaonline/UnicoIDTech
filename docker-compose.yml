@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+  dbMySqlModeloServer6:
+    image: mysql:5.6
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+      - MYSQL_DATABASE=modelodesafio
+      - MYSQL_USER=modelo
+      - MYSQL_PASSWORD=modelo
+      - MYSQL_ROOT_PASSWORD=modelo
+      - MYSQL_TCP_PORT= 3306
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+          - my-db:/var/lib/dbMySqlModeloServerD
+    restart: always
+
+  MODELO.Desafio.API:
+    image: ${DOCKER_REGISTRY-}modelodesafioapi
+    build:
+      context: .
+      dockerfile: MODELO.Desafio.API/Dockerfile
+    depends_on:
+      - dbMySqlModeloServer6    
+    ports:
+      - "5000:80"
+    links:
+      - dbMySqlModeloServer6
+    restart: always
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+volumes:
+  my-db:
+
