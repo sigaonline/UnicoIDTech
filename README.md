@@ -18,10 +18,11 @@
   
   Observações:
   - Deve-se ter instalado;
-    - Docker
-    - Visual Studio 2022
+    - Docker;
+    - Visual Studio 2022;
     - Fine Code Coverage https://github.com/FortuneN/FineCodeCoverage/releases
-    - clonar o repositorio , codigo ma branch master.
+    - clonar o repositorio , codigo ma branch master;
+    - dar um clean na solution e recompilar em seguiga;
     - Na primeira execução do micro-serviço em meu ambiente estava ocorrendo um erro ao acessar o banco de dados do MySQL, porem na segunda execução funciona mormalmente. Não tive tempo de verificar este bug. Acho que o docker esta demorando um pouco pra subir.
   
   
